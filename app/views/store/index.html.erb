@@ -17,13 +17,14 @@
 			</article>
 
 			<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-			data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-			data-description="A month's subscription"
-			data-label="Buy now"
-			data-amount="500"
-			data-billing-address="true"
-			data-shipping-address="true"
-			data-locale="auto"></script>
+				data-key="<%= Rails.application.secrets.stripe_publishable_key %>"
+				data-description="A month's subscription"
+				data-label="Buy now"
+				data-amount="999"
+				data-billing-address="true"
+				data-shipping-address="true"
+				data-locale="auto">				
+			</script>
 		<% end %>
 	</div>
 </div>
